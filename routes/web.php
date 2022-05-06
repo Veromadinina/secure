@@ -58,7 +58,8 @@ Route::get("/admin/actu-supprimer/{actu}",[ActuController::class,'delete'])->mid
 
 //route client
 
-Route::get("/client",[NewsController::class,'index']);
+Route::get("/client",[NewsController::class,'index'])->name('actu-client');
+Route::get("/client/detail/{actu}",[NewsController::class,'detail'])->name('actu-detail');
 
 
 
